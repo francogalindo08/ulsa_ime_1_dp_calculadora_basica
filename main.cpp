@@ -15,7 +15,7 @@ int main() {
     //       ¿De qué tipo es cada una? Revisa la sección 2 de tu README.
     //       ¿Con qué valor empieza un char?
    
-int SUMA =1 ,RESTA=2 , DIV=3 ,MUL=4;
+double SUMA =1 ,RESTA=2 , DIV=3 ,MUL=4;
 double A =0.0;
 double B= 0.0;
 int Operacion;
@@ -27,7 +27,7 @@ int Operacion;
 
     // Paso 3: leer la opción con leerEntero y repetir si no está entre 1 y 4
     do {
-        Operacion = leerDecimal("Ingresa la operacion (1-suma, 2-resta, 3-division, 4-multiplicacion): ");
+        Operacion = leerEntero("Ingresa la operacion (1-suma, 2-resta, 3-division, 4-multiplicacion): ");
         if (Operacion < 1 || Operacion > 4) {
             std::cout << "Ingrese un valor entre 1 y 4 validos.\n";
         }

@@ -57,7 +57,11 @@ g++ -Wall -Wextra -std=c++17 main.cpp -o calculadora
 <!-- Pega aquí lo que muestra tu programa en pantalla con una división donde primero escribes 0 como segundo número. -->
 
 ```
-_____
+___Calculadora b├ísica
+Ingresa la operacion (1-suma, 2-resta, 3-division, 4-multiplicacion): 3
+Ingresa numero A: 8
+Ingresa numero B: 5
+ A/B 1.6__
 ```
 
 ## 8. De la receta al código (Fase 3)
@@ -104,65 +108,65 @@ _____
 | Resta negativa | 2, 3, 5 | 3 - 5 = -2 | __no___ | ___8__ |
 | Multiplicación con decimales | 3, 2.5, 4 | 2.5 * 4 = 10 | __si___ | ___si__ |
 | Multiplicación con negativo | 3, -3, 4 | -3 * 4 = -12 | ___si__ | _____ |
-| División | 4, 7, 2 | 7 / 2 = 3.5 | _no____ | _____ |
-| Dividendo cero | 4, 0, 5 | 0 / 5 = 0 | _____ | _____ |
-| Divisor cero | 4, 5, 0 (luego 2) | vuelve a pedir `b`; 5 / 2 = 2.5 | _____ | _____ |
-| Suma con cero | 1, 5, 0 | 5 + 0 = 5 (**no** vuelve a pedir `b`) | _____ | _____ |
-| Opción fuera de rango | 5 (luego 1), 8, 5 | vuelve a pedir la opción; 8 + 5 = 13 | _____ | _____ |
-| Opción cero | 0 (luego 1), 8, 5 | vuelve a pedir la opción; 8 + 5 = 13 | _____ | _____ |
-| Opción decimal | 2.5 (luego 2), 3, 5 | `leerEntero` vuelve a pedir; 3 - 5 = -2 | _____ | _____ |
-| Opción con texto | `suma` (luego 1), 8, 5 | `leerEntero` vuelve a pedir; 8 + 5 = 13 | _____ | _____ |
-| Número con texto | 1, `abc` (luego 8), 5 | `leerDecimal` vuelve a pedir; 8 + 5 = 13 | _____ | _____ |
-| Caso propio 1 | _____ | _____ | _____ | _____ |
+| División | 4, 7, 2 | 7 / 2 = 3.5 | si | ___si__ |
+| Dividendo cero | 4, 0, 5 | 0 / 5 = 0 | ___no__ | ___muestra error__ |
+| Divisor cero | 4, 5, 0 (luego 2) | vuelve a pedir `b`; 5 / 2 = 2.5 | __si___ | _____ |
+| Suma con cero | 1, 5, 0 | 5 + 0 = 5 (**no** vuelve a pedir `b`) | _si pasa la prueba____ | _____ |
+| Opción fuera de rango | 5 (luego 1), 8, 5 | vuelve a pedir la opción; 8 + 5 = 13 | ___pide otro numero__ | _____ |
+| Opción cero | 0 (luego 1), 8, 5 | vuelve a pedir la opción; 8 + 5 = 13 | _____pide otro numero | _____ |
+| Opción decimal | 2.5 (luego 2), 3, 5 | `leerEntero` vuelve a pedir; 3 - 5 = -2 | __entrada no validas___ | _____ |
+| Opción con texto | `suma` (luego 1), 8, 5 | `leerEntero` vuelve a pedir; 8 + 5 = 13 | _entrada no valida____ | _____ |
+| Número con texto | 1, `abc` (luego 8), 5 | `leerDecimal` vuelve a pedir; 8 + 5 = 13 | __entrada no vaida___ | _____ |
+| Caso propio 1 | ____suma_ | ___3.5+63__ | __66.5___ | _____ |
 | Caso propio 2 | _____ | _____ | _____ | _____ |
 
 ## 11. Bitácora de mejoras (Fase 4)
 
 | # | ¿Qué falló o qué quise mejorar? | ¿Qué cambié? | ¿Funcionó? |
 |---|---|---|---|
-| 1 | _____ | _____ | _____ |
-| 2 | _____ | _____ | _____ |
+| 1 | ____lo de los decimales_ | ___la condicion de entrada__ | ___si__ |
+
 
 **¿Encontré algo que la receta no contemplaba? ¿Qué?**
-_____
+__los switch___
 
-**Reto elegido (opcional):** _____
+**Reto elegido (opcional):** __na___
 
 ## 12. Dudas para el profesor (Fase 3)
 
 | Duda | Lo que ya intenté |
 |---|---|
-| _____ | _____ |
+| ___na__ | ___na__ |
 
 ## 13. Reflexión final
 
 **¿Qué aprendí con esta práctica?**
-_____
+____a hacerlo bien_
 
 **Ahora que terminé, ¿qué cambiaría de mi proceso?**
-_____
+__ nada ka neta___
 
 **¿Qué fue lo más difícil y cómo lo resolví?**
-_____
+__correcto uso de la declaracion___
 
 **¿Qué pregunta me quedó sin responder?**
-_____
+____ninguna_
 
 **¿Fue más fácil programar a partir de una receta ajena que de la mía? ¿Por qué?**
-_____
+___mas dificil porque cuando la hago yo , lo puedo ejecutar en base a lo que yo requiera__
 
 **Si yo hubiera diseñado la receta, ¿qué le cambiaría?**
-_____
+__lo de los switch___
 
 ## 14. Lista de verificación antes de entregar (Fase 5)
 
-- [ ] Llené las secciones 7 a 13 (no quedan `_____`)
-- [ ] No modifiqué las secciones 1 a 6 ni la receta de `RECETA.md`
-- [ ] Cada bloque de `main.cpp` tiene su comentario `// Paso N`
-- [ ] Mi programa compila sin advertencias
-- [ ] Probé todos los casos de la tabla
-- [ ] Hice los Experimentos A y B y dejé el código correcto al terminar
-- [ ] No modifiqué `utilerias.h`
-- [ ] Hice al menos 4 commits con mensajes claros
-- [ ] Hice `git push` y verifiqué mi fork en GitHub
-- [ ] Entregué el enlace de mi fork en Classroom
+- [ t] Llené las secciones 7 a 13 (no quedan `_____`)
+- [ t] No modifiqué las secciones 1 a 6 ni la receta de `RECETA.md`
+- [ t] Cada bloque de `main.cpp` tiene su comentario `// Paso N`
+- [ t] Mi programa compila sin advertencias
+- [ t] Probé todos los casos de la tabla
+- [ t] Hice los Experimentos A y B y dejé el código correcto al terminar
+- [ t] No modifiqué `utilerias.h`
+- [ t] Hice al menos 4 commits con mensajes claros
+- [ t] Hice `git push` y verifiqué mi fork en GitHub
+- [ t] Entregué el enlace de mi fork en Classroom
