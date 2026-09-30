@@ -65,20 +65,30 @@ _____
 
 | Paso de la receta | Instrucción de C++ que lo implementa |
 |---|---|
-| 1 y 2. Título y menú | _____ |
-| 3. Leer y validar la opción | _____ |
-| 4 y 5. Leer `a` y `b` | _____ |
-| 6. Validar el divisor | _____ |
-| 7. Decisión múltiple (un `case`) | _____ |
-| 8. Mostrar el resultado | _____ |
+| 1 y 2. Título y menú | __  std::cout << "Calculadora básica\n";
+        Operacion = leerDecimal("Ingresa la operacion (1-suma, 2-resta, 3-division, 4-multiplicacion): ");___ |
+| 3. Leer y validar la opción | __if (Operacion < 1 || Operacion > 4) {
+            std::cout << "Ingrese un valor entre 1 y 4 validos.\n";
+        }
+     while (Operacion < 1 || Operacion > 4);___ |
+| 4 y 5. Leer `a` y `b` | __ A = leerDecimal("Ingresa numero A: ");
+    B = leerDecimal("Ingresa numero B: ");___ |
+| 6. Validar el divisor | _if (Operacion == 3 && B != 0){
+    DIV= A / B ;
+     std::cout << " A/B " << DIV << "\n";
+} else if (Operacion == 3) {
+    std::cout << "No se puede dividir entre cero.\n";
+}____ |
+| 7. Decisión múltiple (un `case`) | __no use ___ |
+| 8. Mostrar el resultado | ____ std::cout << " A*B " << MUL << "\n";_ |
 
 **¿Hubo algún paso de la receta que te costó traducir a C++? ¿Cuál y por qué?**
-_____
+___nop__
 
 ## 9. Experimentos (Fase 3)
 
 **Experimento A: sin el `break` del `case 1`, ¿qué mostró el programa con 8 + 5? ¿Qué te dijo el compilador? ¿Por qué pasó?**
-_____
+__no use___
 
 **Experimento B: sin la validación del Paso 6, ¿qué mostró el programa con 5 / 0? ¿Tiene sentido?**
 _____
@@ -90,11 +100,11 @@ _____
 
 | Caso | Entradas (opción, a, b) | Esperado | Obtenido | ¿Pasó? |
 |---|---|---|---|---|
-| Suma | 1, 8, 5 | 8 + 5 = 13 | _____ | _____ |
-| Resta negativa | 2, 3, 5 | 3 - 5 = -2 | _____ | _____ |
-| Multiplicación con decimales | 3, 2.5, 4 | 2.5 * 4 = 10 | _____ | _____ |
-| Multiplicación con negativo | 3, -3, 4 | -3 * 4 = -12 | _____ | _____ |
-| División | 4, 7, 2 | 7 / 2 = 3.5 | _____ | _____ |
+| Suma | 1, 8, 5 | 8 + 5 = 13 | __si___ | ___si__ |
+| Resta negativa | 2, 3, 5 | 3 - 5 = -2 | __no___ | ___8__ |
+| Multiplicación con decimales | 3, 2.5, 4 | 2.5 * 4 = 10 | __si___ | ___si__ |
+| Multiplicación con negativo | 3, -3, 4 | -3 * 4 = -12 | ___si__ | _____ |
+| División | 4, 7, 2 | 7 / 2 = 3.5 | _no____ | _____ |
 | Dividendo cero | 4, 0, 5 | 0 / 5 = 0 | _____ | _____ |
 | Divisor cero | 4, 5, 0 (luego 2) | vuelve a pedir `b`; 5 / 2 = 2.5 | _____ | _____ |
 | Suma con cero | 1, 5, 0 | 5 + 0 = 5 (**no** vuelve a pedir `b`) | _____ | _____ |
